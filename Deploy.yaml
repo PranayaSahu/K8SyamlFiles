@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: K8-test-deploy
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: K8-test-deploy
+    spec:
+      containers:
+      - name: hello-pod
+        image: pranaya88/k8s_test_cart:V1
+        ports:
+        - containerPort: 8080
