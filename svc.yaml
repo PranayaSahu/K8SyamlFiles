@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: k8s-test-deploy-svc
   labels:
-    app: K8-test-deploy
+    app: k8s-test-deploy
 spec:
   type: NodePort
   ports:
@@ -11,4 +11,4 @@ spec:
     nodePort: 30001
     protocol: TCP
   selector:
-    app: K8-test-deploy
+    app: k8s-test-deploy

@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: K8-test-deploy
+  name: k8s-test-deploy
 spec:
   replicas: 3
   minReadySeconds: 10
@@ -13,7 +13,7 @@ spec:
   template:
     metadata:
       labels:
-        app: K8-test-deploy
+        app: k8s-test-deploy
     spec:
       containers:
       - name: my-shopping-cart
