@@ -16,7 +16,7 @@ spec:
         app: K8-test-deploy
     spec:
       containers:
-      - name: hello-pod
+      - name: my-shopping-cart
         image: pranaya88/k8s_test_cart:V1
         ports:
         - containerPort: 8080
