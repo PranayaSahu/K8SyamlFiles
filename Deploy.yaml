@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: my-shopping-cart
-        image: pranaya88/k8s_test_cart:V1
+        image: pranaya88/k8s_test_cart1:v1
         ports:
         - containerPort: 8080
