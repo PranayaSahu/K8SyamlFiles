@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: k8s-test-deploy
@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: my-shopping-cart
-        image: pranaya88/k8s_test_cart1:v1
+        image: pranaya88/k8s_test_cart:V1
         ports:
         - containerPort: 8080
