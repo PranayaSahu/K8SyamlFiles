@@ -1,13 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-test-deploy
+  name: my-deployment
 spec:
+  selector:
+    matchLabels:
+      app: shopping-cart
+      department: sales
   replicas: 3
   template:
     metadata:
       labels:
-        app: k8s-test
+        app: shopping-cart
+        department: sales
     spec:
       containers:
       - name: my-shopping-cart
