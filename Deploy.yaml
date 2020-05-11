@@ -4,16 +4,10 @@ metadata:
   name: k8s-test-deploy
 spec:
   replicas: 3
-  minReadySeconds: 10
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
   template:
     metadata:
       labels:
-        app: k8s-test-deploy
+        app: k8s-test
     spec:
       containers:
       - name: my-shopping-cart
