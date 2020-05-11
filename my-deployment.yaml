@@ -5,15 +5,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: metrics
+      app: shopping-cart
       department: sales
   replicas: 3
   template:
     metadata:
       labels:
-        app: metrics
+        app: shopping-cart
         department: sales
     spec:
       containers:
-      - name: hello
-        image: "gcr.io/google-samples/hello-app:2.0"
+      - name: my-shopping-cart
+        image: pranaya88/k8s_test_cart1:v1
